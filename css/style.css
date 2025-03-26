@@ -82,6 +82,16 @@ textarea {
 	outline: none;
 }
 
+.mobile-only {
+display: none;
+}
+
+
+@media (max-width: 768px) {
+.mobile-only {
+display: block;
+}
+}
 label {
 	margin-bottom: 0;
 }
@@ -161,7 +171,11 @@ body {
 	line-height: 1.71429;
 	font-weight: 400;
 	color: #989da7;
-	background-color: #ffffff;
+	background-image: url(../images/background.jpg);
+	background-size: cover; 
+background-attachment: scroll; 
+background-position: center; 
+	position: relative;
 	-webkit-text-size-adjust: none;
 	-webkit-font-smoothing: subpixel-antialiased;
 }
