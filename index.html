@@ -722,13 +722,41 @@
           <h2 id="modal1Title">
             Оставьте ваши контактные данные и наш консультант свяжется с вами
           </h2>
-
-          <input type="text" class="putName" name="name" placeholder="Ваше ваше имя" required />
           <input
+            type="text"
+            id="name"
+            name="name"
+            class="input"
+            autocomplete="off"
+            placeholder="Ваше имя"
+            required
+          />
+
+          <input
+            type="phone"
+            id="phone"
             name="phone"
-            type="tel"
-            class="putPhone"
-            placeholder="Введите номер телефона"
+            autocomplete="off"
+            class="input"
+            placeholder="Номер телефона"
+            required
+          />
+          <input
+            type="text"
+            id="city"
+            name="city"
+            autocomplete="off"
+            class="input"
+            placeholder="Ваш город"
+            required
+          />
+          <input
+            type="number"
+            id="kvm"
+            name="kvm"
+            autocomplete="off"
+            class="input"
+            placeholder="Площадь м2"
             required
           />
           <input type="submit" name="submit" class="btn" value="ОТПРАВИТЬ" />
@@ -741,6 +769,11 @@
       </div>
     </div>
     <div class="snackbars" id="form-output-global"></div>
+    <script>
+      $(document).ready(function ($) {
+        $('#phone').mask('+7 (999) 99-99-999');
+      });
+    </script>
     <script src="js/jquery-1.11.2.min.js"></script>
     <script src="css/remodal.min.js"></script>
     <script src="js/script.js"></script>
