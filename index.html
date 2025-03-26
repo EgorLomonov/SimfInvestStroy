@@ -741,7 +741,6 @@
             placeholder="Номер телефона"
             required
           />
-          <br />
           <input
             type="text"
             id="city"
@@ -750,8 +749,9 @@
             class="input"
             placeholder="Ваш город"
             required
+            
           />
-          <br />
+          
           <input
             type="number"
             id="kvm"
@@ -761,7 +761,14 @@
             placeholder="Площадь м2"
             required
           />
-          <input type="submit" name="submit" class="btn" value="ОТПРАВИТЬ" />
+          <div class="form__submit-button">
+            <button
+              class="button button-md button-primary button-winona wow slideInDown"
+              type="submit"
+            >
+              Отправить заявку
+            </button>
+          </div>
           <input type="hidden" name="formData" value="Заявка с сайта" />
         </form>
       </div>
