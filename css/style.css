@@ -172,9 +172,8 @@ body {
 	font-weight: 400;
 	color: #989da7;
 	background-image: url(../images/background.jpg);
-	background-size: cover; 
-background-attachment: scroll; 
-background-position: center; 
+	background-size: cover;
+	background-repeat: no-repeat;
 	position: relative;
 	-webkit-text-size-adjust: none;
 	-webkit-font-smoothing: subpixel-antialiased;
@@ -5321,10 +5320,12 @@ html [class*='section-'].section-bottom-0 {
 }
 
 .bg-gray-100 {
-	background-color: #fafbfc;
+	background-color: rgba(255, 255, 255, 0.8); / Белый с 50% прозрачностью /
+background-image: url('your-image-url.jpg');
+background-size: cover;
 }
 
-.bg-gray-100:not([style*="background-"]) + .bg-gray-100:not([style*="background-"]) {
+.bg-gray-100:not([style*="background-image: url(../images/background.jpg);"]) + .bg-gray-100:not([style*="background-image: url(../images/background.jpg);"]) {
 	padding-top: 0;
 }
 
@@ -5446,7 +5447,9 @@ html [class*='section-'].section-bottom-0 {
 	content: '';
 	position: absolute;
 	height: 1px;
-	background: #dde1e4;
+	background-color: rgba(255, 255, 255, 0.5); / Белый с 50% прозрачностью /
+background-image: url('your-image-url.jpg');
+background-size: cover;
 	top: 50%;
 	width: 100vw;
 }

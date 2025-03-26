@@ -81,13 +81,14 @@
             data-xl-stick-up="true"
             data-xxl-stick-up="true"
           >
+          <!--
             <div
               class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1"
               data-rd-navbar-toggle=".rd-navbar-collapse"
             >
               <span></span>
             </div>
-            <div class="rd-navbar-aside-outer rd-navbar-collapse">
+<div class="rd-navbar-aside-outer rd-navbar-collapse">
               <div class="rd-navbar-aside">
                 <div class="rd-navbar-info">
                   <div class="icon novi-icon mdi mdi-phone"></div>
@@ -103,6 +104,7 @@
                 </div>
               </div>
             </div>
+          -->
             <div class="rd-navbar-main-outer">
               <div class="rd-navbar-main-inner">
                 <div class="rd-navbar-main">
@@ -144,14 +146,14 @@
                       </ul>
                       <br/>
                       <a href="tel:+79781896582" style="color: 
-                      #e4e3e9;">+7 (978) 189-65-82</a>
+                      #516ca9;    padding: 9px 56px 9px 18px;">+7 (978) 189-65-82</a>
                                         <div class="icon novi-icon mdi mdi-phone"></div>
                                         <a href="tel:+79787856008" style="color: 
-                      #e4e3e9;">+7 (978) 785-60-08</a>
+                      #516ca9;     padding: 9px 56px 9px 18px;">+7 (978) 785-60-08</a>
                       <br/>
                       
                                         <h7 style="color: 
-                      #e4e3e9">Пн.–Сб. 9:00–18:00</h1>
+                      #516ca9;    padding: 9px 56px 9px 18px;">Пн.–Сб. 9:00–18:00</h1>
                     </div>
                   </div>
                 </div>
@@ -337,7 +339,7 @@
         ></div>
       </section>
       <hr />
-      <section class="section section-last bg-default">
+      <section class="section section-last bg-gray-100">
         <div class="container-fluid container-inset-0 isotope-wrap">
           <div
             class="row row-10 gutters-10 isotope"
@@ -469,7 +471,7 @@
       </section>
 
       <!-- Миссия-->
-      <section class="section bg-default section-md">
+      <section class="section bg-gray-100 section-md">
         <div class="container">
           <div class="row row-30">
             <div class="col-md-6">
@@ -638,7 +640,7 @@
       </section>
 
       <!-- Latest Articles-->
-      <section class="section bg-default section-md">
+      <section class="section bg-gray-100 section-md">
         <div class="container">
           <h2 class="title-icon">
             <span class="icon icon-default mercury-icon-news"></span
@@ -793,6 +795,8 @@
     <script>
       if (window.innerWidth > 768) {
     document.querySelector('.rd-navbar-aside-outer').style.display = 'none';
+}else{
+  document.querySelector('.rd-navbar-aside-outer').style.display = 'active';
 }
       $(document).ready(function ($) {
         $('#tel').mask('+7 (999) 99-99-999');
