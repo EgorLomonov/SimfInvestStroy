@@ -733,10 +733,10 @@
           />
 
           <input
-            type="phone"
-            id="phone"
-            name="phone"
-            autocomplete="off"
+            type="tel"
+            id="tel"
+            name="tel"
+            autocomplete="tel"
             class="input"
             placeholder="Номер телефона"
             required
@@ -771,10 +771,11 @@
     <div class="snackbars" id="form-output-global"></div>
     <script>
       $(document).ready(function ($) {
-        $('#phone').mask('+7 (999) 99-99-999');
+        $('#tel').mask('+7 (999) 99-99-999');
       });
     </script>
     <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="/js/imasked.min.js"></script>
     <script src="css/remodal.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/core.min.js"></script>
