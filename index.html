@@ -201,7 +201,7 @@
               </div>
             </div>
           </div>
-          <div class="swiper-slide" data-slide-bg="images/index-1-slider-2-1920x768.jpg">
+          <div class="swiper-slide" style="background-color:(rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0.8))," data-slide-bg="images/index-1-slider-2-1920x768.jpg">
             <div class="swiper-slide-caption section-lg">
               <div class="container">
                 <div class="row">
@@ -735,7 +735,7 @@
 
         <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
 
-        <form id="form">
+        <form id="form" class="form">
           <h2 id="modal1Title">
             Оставьте ваши контактные данные и наш консультант свяжется с вами
           </h2>
@@ -750,22 +750,12 @@
           />
           <br />
           <input
-            type="tel"
-            id="tel"
-            name="tel"
-            autocomplete="tel"
+            type="phone"
+            id="phone"
+            name="phone"
+            autocomplete="phone"
             class="input"
             placeholder="Номер телефона"
-            required
-          />
-          <br />
-          <input
-            type="text"
-            id="city"
-            name="city"
-            autocomplete="off"
-            class="input"
-            placeholder="Ваш город"
             required
           />
           <br />
@@ -793,6 +783,27 @@
     </div>
     <div class="snackbars" id="form-output-global"></div>
     <script>
+      const TELEGRAM_BOT_TOKEN = '8193946447:AAGQCdeOOnGRtH43SBAm0uR2Rhk7K9NLtcs';
+	const TELEGRAM_CHAT_ID = '-8193946447';
+	const API = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`
+	
+	document.getElementById('form').addEventListener('submit',function(e){
+    e.preventDefault()
+    let message = 'Заявка с сайта\n' + 'Имя:' + this.name.value + '\n' + 'Номер телефона:' + this.phone.value + '\n'+ 'Город:' + this.city.value + '\n' + 'Квадратных метров:' + this.kvm.value;
+    axios.post(API, {
+      chat_id: TELEGRAM_CHAT_ID,
+      text: message
+    })
+    .then((res)=>{
+      ///
+    })
+    .catch((err) =>{
+      console.warn(err);
+    })
+    .finally(()=>{
+      console.log('ГОтово')
+    })
+  })
       if (window.innerWidth > 768) {
     document.querySelector('.rd-navbar-aside-outer').style.display = 'none';
 }else{
@@ -802,12 +813,16 @@
         $('#tel').mask('+7 (999) 99-99-999');
       });
     </script>
+    <script src="js/tgmail.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/imasked.min.js"></script>
     <script src="js/jquery-1.11.2.min.js"></script>
     <script src="/js/imasked.min.js"></script>
     <script src="css/remodal.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+ 
     <!--coded by Starlight-->
   </body>
 </html>
