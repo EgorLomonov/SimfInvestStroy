@@ -736,9 +736,7 @@
         <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
 
         <form id="form" class="form">
-          <h2 id="modal1Title">
-            Оставьте ваши контактные данные и наш консультант свяжется с вами
-          </h2>
+          <div class="form__group">
           <input
             type="text"
             id="name"
@@ -748,17 +746,25 @@
             placeholder="Ваше имя"
             required
           />
-          <br />
+        
           <input
             type="phone"
             id="phone"
             name="phone"
-            autocomplete="phone"
+            autocomplete="off"
             class="input"
             placeholder="Номер телефона"
             required
           />
-          <br />
+          <input
+            type="text"
+            id="city"
+            name="city"
+            autocomplete="off"
+            class="input"
+            placeholder="Ваш город"
+            required
+          />
           <input
             type="number"
             id="kvm"
@@ -768,16 +774,12 @@
             placeholder="Площадь м2"
             required
           />
-          <br />
+        </div> 
           <div class="form__submit-button">
-            <button
-              class="button button-md button-primary button-winona wow slideInDown"
-              type="submit"
-            >
-              Отправить заявку
-            </button>
+            <button class="button button-md button-primary button-winona wow slideInDown" type="submit">Отправить заявку</button>
           </div>
-          <input type="hidden" name="formData" value="Заявка с сайта" />
+         
+          <div class="form__send-result"></div>
         </form>
       </div>
     </div>
@@ -785,10 +787,10 @@
     <script>
       const TELEGRAM_BOT_TOKEN = '8193946447:AAGQCdeOOnGRtH43SBAm0uR2Rhk7K9NLtcs';
 	const TELEGRAM_CHAT_ID = '-4688805448';
-	const API = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`
+	const API = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
 	
 	document.getElementById('form').addEventListener('submit',function(e){
-    e.preventDefault()
+    e.preventDefault();
     let message = 'Заявка с сайта\n' + 'Имя:' + this.name.value + '\n' + 'Номер телефона:' + this.phone.value + '\n'+ 'Город:' + this.city.value + '\n' + 'Квадратных метров:' + this.kvm.value;
     axios.post(API, {
       chat_id: TELEGRAM_CHAT_ID,
