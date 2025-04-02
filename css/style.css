@@ -5321,8 +5321,8 @@ html [class*='section-'].section-bottom-0 {
 }
 
 .bg-gray-100 {
-	background-color: rgba(255, 255, 255, 0.8); / Белый с 50% прозрачностью /
-background-image: url('../images/background.jpg');
+	background-image: url('../images/background.jpg');	
+
 background-size: cover;
 }
 
