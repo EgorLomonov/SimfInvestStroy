@@ -5322,6 +5322,7 @@ html [class*='section-'].section-bottom-0 {
 
 .bg-gray-100 {
 	background-color: rgba(255, 255, 255, 0.8); / Белый с 50% прозрачностью /
+background-image: url('your-image-url.jpg');
 background-size: cover;
 }
 
@@ -5333,7 +5334,7 @@ background-size: cover;
 	background-color: #31404a;
 }
 
-.bg-gray-800:not([style*="background-image: url(../images/background.jpg);"]) + .bg-gray-800:not([style*="background-image: url(../images/background.jpg);"]) {
+.bg-gray-800:not([style*="background-"]) + .bg-gray-800:not([style*="background-"]) {
 	padding-top: 0;
 }
 
