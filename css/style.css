@@ -5333,7 +5333,7 @@ background-size: cover;
 	background-color: #31404a;
 }
 
-.bg-gray-800:not([style*="background-"]) + .bg-gray-800:not([style*="background-"]) {
+.bg-gray-800:not([style*="background-image: url(../images/background.jpg);"]) + .bg-gray-800:not([style*="background-image: url(../images/background.jpg);"]) {
 	padding-top: 0;
 }
 
