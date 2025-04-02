@@ -414,6 +414,7 @@ p [style*='max-width'] {
 }
 
 .text-light {
+	color: grey;
 	font-weight: 300;
 }
 
