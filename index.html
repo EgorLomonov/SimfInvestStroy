@@ -787,6 +787,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/jquery.maskediput.js"></script>
     <script>
+      $(window).load(function()
+{
+   var phones = [{ "mask": "+7(###) ###-##-##"}, { "mask": "8 (###) ###-##-##"}];
+    $('#phone').inputmask({ 
+        mask: phones, 
+        greedy: false, 
+        definitions: { '#': { validator: "[0-9]", cardinality: 1}} });
+})
+
       const TELEGRAM_BOT_TOKEN = '8193946447:AAGQCdeOOnGRtH43SBAm0uR2Rhk7K9NLtcs';
 	const TELEGRAM_CHAT_ID = '-4688805448';
 	const API = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
@@ -809,9 +818,7 @@
     })
   })
    
-      $(document).ready(function ($) {
-        $('#phone').mask('+7 (999) 99-99-999');
-      });
+   
     </script>
     <script src="js/axios.min.js"></script>
     <script src="js/imasked.min.js"></script>
