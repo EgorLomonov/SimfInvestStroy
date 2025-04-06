@@ -5338,7 +5338,7 @@ background-size: cover;
 }
 
 .bg-primary {
-	background-color: #516ca9;
+	background-color: #321414;
 }
 
 .bg-primary:not([style*="background-"]) + .bg-primary:not([style*="background-"]) {
