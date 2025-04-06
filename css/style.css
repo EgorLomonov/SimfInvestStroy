@@ -5338,14 +5338,11 @@ background-size: cover;
 }
 
 .bg-primary {
-	background: -webkit-linear-gradient(90deg, #d4179f,#5b49c9);
-	background: linear-gradient(90deg, #d4179f,#5b49c9);
+	background-color: #28282B;
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
 }
 
-.bg-primary4 {
-	background: -webkit-linear-gradient(90deg, #d4179f,#5b49c9);
-	background: linear-gradient(90deg, #d4179f,#5b49c9);
-}
 .bg-primary:not([style*="background-"]) + .bg-primary:not([style*="background-"]) {
 	padding-top: 0;
 }
