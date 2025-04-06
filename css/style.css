@@ -5341,6 +5341,9 @@ background-size: cover;
 	background-color: #321414;
 }
 
+.bg-primary4 {
+	background-color: #321414;
+}
 .bg-primary:not([style*="background-"]) + .bg-primary:not([style*="background-"]) {
 	padding-top: 0;
 }
